@@ -17,13 +17,23 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    background-color: #003366;
+    background-color: #ffffff;
     color: #fff;
 }
 
+/* Set the height of the logo */
 .logo img {
-    height: 40px;
+    height: 90px;
+    position: absolute; /* Positioning the logo absolutely */
+    top: 0; /* Default top position */
+    left: 0; /* Default left position */
+    right: auto; /* Default right value */
+    bottom: auto; /* Default bottom value */
+    transform: scale(1); /* Default scale */
+    transition: transform 0.3s ease, top 0.3s ease, left 0.3s ease, right 0.3s ease, bottom 0.3s ease; /* Smooth transitions for changes */
 }
+
+
 
 nav ul, .navbar ul {
     list-style: none;
@@ -36,7 +46,7 @@ nav ul li, .navbar ul li {
 
 nav ul li a, .navbar ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -45,7 +55,7 @@ nav ul li a, .navbar ul li a {
     position: relative;
     max-width: 100%;
     overflow: hidden;
-    background-color: #00aaff;
+    background-color: #e607d1;
 }
 
 .carousel-container {
@@ -63,10 +73,11 @@ nav ul li a, .navbar ul li a {
 }
 
 .carousel-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+    width: 1280px; /* Set width to 963px */
+    height: 720px; /* Set height to 457px */
+    object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
 }
+
 
 /* Tiny Slider Carousel */
 .cz-carousel {
@@ -77,6 +88,49 @@ nav ul li a, .navbar ul li a {
 .cz-carousel-inner {
     position: relative;
     display: flex;
+}
+
+/* ---------------------------------------------------------------------- CAROUSEL TEKS */
+.cz-carousel-inner h1, 
+.cz-carousel-inner h2, 
+.cz-carousel-inner p {
+    color: #fff; /* Menetapkan warna teks menjadi putih */
+    font-weight: bold; /* Menambahkan ketebalan font jika diperlukan */
+}
+
+.cz-carousel-inner .btn-shop-now {
+    color: #fff; /* Warna teks tombol Shop Now menjadi putih */
+    border: 2px solid #fff; /* Menambahkan border putih pada tombol */
+}
+
+/* Konten teks di dalam slide */
+.cz-carousel-inner .position-relative {
+    color: #fff; /* Teks di dalam carousel menjadi putih */
+}
+
+.cz-carousel-inner h1 {
+    font-size: 3rem; /* Ukuran font besar untuk judul */
+}
+
+.cz-carousel-inner h2 {
+    font-size: 2rem; /* Ukuran font lebih kecil untuk subjudul */
+}
+
+.cz-carousel-inner p {
+    font-size: 1.25rem; /* Ukuran font untuk paragraf */
+}
+
+/* Styling untuk tombol Shop Now dalam carousel */
+.cz-carousel-inner .btn-shop-now {
+    background-color: transparent; /* Menghilangkan latar belakang tombol */
+    color: #fff; /* Warna teks tombol menjadi putih */
+    border: 2px solid #fff; /* Warna border tombol putih */
+}
+
+.cz-carousel-inner .btn-shop-now:hover {
+    background-color: #fff; /* Background putih saat hover */
+    color: #003366; /* Teks menjadi warna biru saat hover */
+    border: 2px solid #003366; /* Border menjadi biru saat hover */
 }
 
 /* Navigation buttons for Carousel */
@@ -111,7 +165,7 @@ nav ul li a, .navbar ul li a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #00aaff;
+    background-color: e607d1;
     padding: 40px 5%;
     color: #fff;
 }
@@ -185,7 +239,7 @@ nav ul li a, .navbar ul li a {
     left: 20px;
     background-color: #fff;
     padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(255, 253, 253, 0.2);
     border-radius: 5px;
     text-align: center;
 }
@@ -365,4 +419,45 @@ h1 {
 
 .btn-primary:hover {
     background-color: #0056b3;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Logo Styling */
+.logo {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#logoImage {
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Styling for the WhatsApp link */
+.topbar-link {
+    display: flex;
+    align-items: center;
+    color: #000000;
+    text-decoration: none;
+    margin-left: 20px; /* Add spacing between other elements */
+}
+
+.topbar-link img {
+    width: 30px; /* Set icon size */
+    margin-right: 5px;
+}
+
+.topbar-link .text-muted {
+    font-size: 14px;
 }
