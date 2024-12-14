@@ -1,0 +1,368 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* ---------------------------------------------------------------------- HEADER / NAVBAR */
+.top-bar, .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #003366;
+    color: #fff;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul, .navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li, .navbar ul li {
+    margin: 0 10px;
+}
+
+nav ul li a, .navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------------------------- CAROUSEL */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #00aaff;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    display: none; /* Hide all images by default */
+}
+
+.carousel-item.active {
+    display: block; /* Show active image */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Tiny Slider Carousel */
+.cz-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.cz-carousel-inner {
+    position: relative;
+    display: flex;
+}
+
+/* Navigation buttons for Carousel */
+.prev-slide, .next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.prev-slide:hover, .next-slide:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-slide {
+    left: 10px;
+}
+
+.next-slide {
+    right: 10px;
+}
+
+/* ---------------------------------------------------------------------- PROMO BANNER */
+.promo-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00aaff;
+    padding: 40px 5%;
+    color: #fff;
+}
+
+.promo-content h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.promo-content span {
+    color: #ff5a5f;
+}
+
+.promo-content p {
+    margin: 10px 0 20px;
+}
+
+.shop-button {
+    display: inline-block;
+    background-color: #ff5a5f;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.promo-image img {
+    max-width: 400px;
+}
+
+/* ---------------------------------------------------------------------- DIGITAL PRINTING */
+.digital-printing {
+    padding: 30px 5%;
+    background-color: #f4f4f4;
+}
+
+.digital-printing h3 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    text-align: center;
+    margin: 10px;
+    width: 200px; /* Ensures proper size */
+}
+
+.product-item img {
+    max-width: 150px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.product-item p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------------------------- CHAT BOX */
+.chat-box {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.chat-box a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------------------------- GENERAL BUTTON STYLING */
+.btn-shop-now {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #ff6f6f; /* Warna merah muda */
+    color: #ffffff; /* Warna teks putih */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for button */
+.btn-shop-now:hover {
+    background-color: #ff4f4f; /* Warna merah yang lebih tua saat hover */
+    transform: translateY(-2px);
+}
+
+/* Icon inside button */
+.btn-shop-now i {
+    margin-left: 8px; /* Jarak antara teks dan ikon */
+    font-size: 16px;
+}
+
+/* ---------------------------------------------------------------------- LAYOUT WRAPPER AND FLEX CONTAINERS */
+.tns-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #18a0da; /* Warna latar */
+    padding: 40px 5%;
+}
+
+.d-flex {
+    width: 495px; /* Tentukan lebar */
+    height: 604.78px; /* Tentukan tinggi */
+    overflow: hidden;
+    border-radius: 10px; /* Sesuaikan jika diperlukan */
+    background-color: #ffdcdd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.d-flex img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Agar gambar mengikuti rasio dan tidak melampaui ukuran kontainer */
+}
+
+/* Konten Teks */
+.position-relative {
+    text-align: left;
+    max-width: 42rem; /* Membatasi lebar teks */
+    z-index: 10;
+    flex: 1; /* Mengisi sisa ruang fleksibel */
+    padding-right: 20px; /* Memberikan jarak antara teks dan gambar */
+}
+
+/* Gambar */
+.d-block {
+    order: 2; /* Menempatkan gambar di sebelah kanan */
+    max-width: 100%;
+    height: auto;
+    margin-left: 20px; /* Memberikan jarak antara gambar dan teks */
+    flex-shrink: 0; /* Mencegah gambar mengecil */
+}
+
+/* ---------------------------------------------------------------------- TYPOGRAPHY */
+h2, h1, p {
+    line-height: 1.5;
+}
+
+h1 {
+    line-height: 1.2;
+}
+
+/* ---------------------------------------------------------------------- Belanja Digital Printing */
+/* Styling untuk tombol Belanja Digital Printing */
+.btn-belanja {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff5a5f; /* Warna teks merah muda */
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.btn-belanja:hover {
+    color: #ff4f4f; /* Warna teks saat hover */
+}
+
+.btn-belanja i {
+    margin-left: 8px; /* Jarak antara teks dan ikon */
+    font-size: 16px;
+}
+
+/* Custom CSS for Navigation Buttons */
+.prev-slide, .next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.prev-slide { left: 10px; }
+.next-slide { right: 10px; }
+
+.prev-slide i, .next-slide i {
+    font-size: 1.5rem;
+}
+
+/* Sembunyikan tombol Start/Stop */
+[data-action="start"], [data-action="stop"] {
+    display: none !important;
+}
+
+/* Styling untuk Digital Printing */
+.digital-printing .col-md-7 {
+    display: grid;
+    grid-template-columns: repeat(3, 224.33px);
+    grid-template-rows: repeat(auto-fill, 209.59px);
+    gap: 16px;
+    justify-content: start;
+    width: 705px;
+    height: 604px;
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-title a {
+    color: black;
+    text-decoration: none;
+}
+
+.product-title a:hover {
+    text-decoration: underline;
+}
+
+.star-rating i {
+    color: gold;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 0.375rem;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
